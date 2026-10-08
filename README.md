@@ -80,14 +80,14 @@ dotnet run
 
 #### Spuštění hry
 
-![Spuštění hry](Assets/start-hry.png)
+![Spuštění hry](ZolikKonzole/Assets/start-hry.png)
 
 #### Průběh hry
 
-![Průběh hry](Assets/herni-tah.png)
+![Průběh hry](ZolikKonzole/Assets/herni-tah.png)
 
 #### Konec hry
 
-![Konec Hry](Assets/konec-hry.png)
+![Konec Hry](ZolikKonzole/Assets/konec-hry.png)
 
 ---
