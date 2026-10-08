@@ -33,11 +33,16 @@ Níže je zobrazen přehled klíčových částí zdrojového kódu aplikace:
 
 ```text
 ZolikKonzole/
+├── assets/
+│   ├── start-hry.png
+│   ├── herni-tah.png
+│   └── konec-hry.png
 ├── Program.cs             # Hlavní vstupní bod aplikace a řízení herní smyčky
 ├── Hra.cs                 # Logika samotné hry, správa tahů a herních fází
 ├── Balicek.cs             # Třída pro generování, míchání a lízání karet
 ├── Karta.cs               # Datový model jednotlivé karty (Barva, Hodnota, Žolík)
-└── Hrac.cs                # Reprezentace hráče (Jméno, List karet v ruce, Skóre)
+├── Hrac.cs                # Reprezentace hráče (Jméno, List karet v ruce, Skóre)
+└── README.md
 ```
 
 ---
@@ -68,3 +73,21 @@ Hru v konzoli spustíte následujícím příkazem:
 ```bash
 dotnet run
 ```
+
+---
+
+### 📸 Ukázky aplikace
+
+#### Spuštění hry
+
+![Spts/start-hry.png
+
+#### Průběh hry
+
+![Prts/herni-tah.png
+
+#### Konec hry
+
+!ssets/konec-hry.png
+
+---
