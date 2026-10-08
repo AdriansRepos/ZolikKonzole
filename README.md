@@ -37,8 +37,7 @@ ZolikKonzole/
 ├── Hra.cs                 # Logika samotné hry, správa tahů a herních fází
 ├── Balicek.cs             # Třída pro generování, míchání a lízání karet
 ├── Karta.cs               # Datový model jednotlivé karty (Barva, Hodnota, Žolík)
-├── Hrac.cs                # Reprezentace hráče (Jméno, List karet v ruce, Skóre)
-└── ...                    # Pomocné třídy, Enums (BarvaKarty.cs, HodnotaKarty.cs)
+└── Hrac.cs                # Reprezentace hráče (Jméno, List karet v ruce, Skóre)
 ```
 
 ---
