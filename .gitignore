@@ -1,0 +1,15 @@
+# Built files and binaries (.NET)
+[Bb]in/
+[Oo]bj/
+[LGs]og/
+[LGs]ogs/
+
+# Temporary folders for Visual Studio
+.vs/
+*.user
+*.userosscache
+*.sln.docstates
+
+# Test outputs and packages
+*.nupkg
+*.suo
