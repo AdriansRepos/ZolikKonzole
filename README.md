@@ -33,7 +33,7 @@ Níže je zobrazen přehled klíčových částí zdrojového kódu aplikace:
 
 ```text
 ZolikKonzole/
-├── assets/
+├── Assets/
 │   ├── start-hry.png
 │   ├── herni-tah.png
 │   └── konec-hry.png
