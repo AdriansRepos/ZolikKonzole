@@ -15,7 +15,8 @@ while (!hra.KonecHry)
     else
     {
         hra.TahPocitace();
-    }hracNaRade = !hracNaRade;
+    }
+    hracNaRade = !hracNaRade;
 }
 
 Console.Clear();

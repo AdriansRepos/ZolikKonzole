@@ -156,7 +156,8 @@
                 Console.WriteLine("Zadej indexy karet pro JEDNU sadu oddělené čárkou (např. 2,3,4) nebo stiskni ENTER pro odeslání:");
                 string vstup = Console.ReadLine()!;
 
-                if (string.IsNullOrWhiteSpace(vstup)) break;
+                if (string.IsNullOrWhiteSpace(vstup)) 
+                    break;
 
                 try
                 {
@@ -455,7 +456,8 @@
                                 }
                             }
                         }
-                        if (probehloPrilozeni) break;
+                        if (probehloPrilozeni) 
+                            break;
                     }
                 }
             }
@@ -516,7 +518,8 @@
                     Console.Write($"Sada {i + 1}: ");
                     
                     foreach (Karta k in stul[i]) 
-                        Console.Write($"[{k}] ");Console.WriteLine();
+                        Console.Write($"[{k}] ");
+                    Console.WriteLine();
                 }
             }
         }

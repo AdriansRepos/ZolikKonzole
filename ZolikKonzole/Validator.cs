@@ -9,7 +9,8 @@
             var zolici = sada.Where(k => k.Hodnota == "Žolík").ToList();
             var beznatKarty = sada.Where(k => k.Hodnota != "Žolík").ToList();
 
-            if (beznatKarty.Count == 0) return true;
+            if (beznatKarty.Count == 0) 
+                return true;
 
             return JePlatnaSkupina(beznatKarty, zolici.Count) || JePlatnaPostupka(beznatKarty, zolici.Count);
         }
@@ -23,12 +24,15 @@
         private static bool JePlatnaSkupina(List<Karta> karty, int pocetZoliku)
         {
             string prvniHodnota = karty[0].Hodnota;
-            if (karty.Any(k => k.Hodnota != prvniHodnota)) return false;
+            if (karty.Any(k => k.Hodnota != prvniHodnota)) 
+                return false;
 
             var unikatniBarvy = karty.Select(k => k.Barva).Distinct().ToList();
-            if (unikatniBarvy.Count != karty.Count) return false;
+            if (unikatniBarvy.Count != karty.Count) 
+                return false;
 
-            if (karty.Count + pocetZoliku > 4) return false;
+            if (karty.Count + pocetZoliku > 4) 
+                return false;
 
             return true;
         }
@@ -36,11 +40,13 @@
         private static bool JePlatnaPostupka(List<Karta> karty, int pocetZoliku)
         {
             string prvniBarva = karty[0].Barva;
-            if (karty.Any(k => k.Barva != prvniBarva)) return false;
+            if (karty.Any(k => k.Barva != prvniBarva)) 
+                return false;
 
             var serazeneKarty = karty.OrderBy(k => k.Sila).ToList();
 
-            if (ZkontrolujCiselneMezery(serazeneKarty, pocetZoliku)) return true;
+            if (ZkontrolujCiselneMezery(serazeneKarty, pocetZoliku)) 
+                return true;
 
             if (serazeneKarty.Any(k => k.Hodnota == "A"))
             {
@@ -63,7 +69,8 @@
             for (int i = 0; i < seřadeneKarty.Count - 1; i++)
             {
                 int rozdil = seřadeneKarty[i + 1].Sila - seřadeneKarty[i].Sila;
-                if (rozdil == 0) return false; 
+                if (rozdil == 0) 
+                    return false; 
                 potreneZoliky += (rozdil - 1);
             }
             return potreneZoliky <= dostupniZolici;

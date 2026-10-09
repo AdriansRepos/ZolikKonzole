@@ -10,9 +10,12 @@
         {
             get
             {
-                if (Hodnota == "Žolík") return 11; // Žolík za 11 bodů
-                if (Hodnota == "A") return 11;     // Eso za 11 bodů (pro zjednodušení výpočtu 51 b.)
-                if (Hodnota == "J" || Hodnota == "Q" || Hodnota == "K" || Hodnota == "10") return 10;
+                if (Hodnota == "Žolík") 
+                    return 11; // Žolík za 11 bodů
+                if (Hodnota == "A") 
+                    return 11;     // Eso za 11 bodů (pro zjednodušení výpočtu 51 b.)
+                if (Hodnota == "J" || Hodnota == "Q" || Hodnota == "K" || Hodnota == "10") 
+                    return 10;
                 
                 return int.Parse(Hodnota); // Karty 2-9 mají svou nominální hodnotu
             }
