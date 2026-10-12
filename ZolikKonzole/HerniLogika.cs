@@ -77,9 +77,15 @@
             if (rukaHrac.Count < 15)
             {
                 Console.WriteLine($"\n[VRCHNÍ KARTA NA KOPĚ]: [{odhazovaciBalicek.Last()}]");
-                Console.Write("Odkud chceš líznout? (1 - Balíček, 2 - Kopa): ");
-                string volba = Console.ReadLine()!;
                 
+                string volba = "";
+                
+                while (volba != "1" && volba != "2")
+                {
+                    Console.Write("Odkud chceš líznout? (1 - Balíček, 2 - Kopa): ");
+                    volba = Console.ReadLine()!.Trim();
+                }
+
                 if (volba == "2") 
                 {
                     rukaHrac.Add(odhazovaciBalicek.Last());
@@ -105,7 +111,7 @@
                 Console.WriteLine("2 - Přiložit kartu do existující sady na stole");
                 Console.WriteLine("3 - Ukončit tah odhozením karty");
                 Console.Write("Tvoje volba: ");
-                string volbaMezitahu = Console.ReadLine()!;
+                string volbaMezitahu = Console.ReadLine()!.Trim();
         
                 if (volbaMezitahu == "1")
                 {
@@ -118,6 +124,12 @@
                 else if (volbaMezitahu == "3")
                 {
                     akceDokoncena = true;
+                }
+                else
+                {
+                    // OŠETŘENÍ PRÁZDNÉHO NEBO CHYBNÉHO VSTUPU
+                    Console.WriteLine("⚠️ Neplatná volba! Stiskněte 1, 2 nebo 3.");
+                    Thread.Sleep(1500); // Necháme uživateli čas si hlášku přečíst
                 }
             }
         
